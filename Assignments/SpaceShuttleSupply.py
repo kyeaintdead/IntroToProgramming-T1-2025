@@ -1,19 +1,9 @@
 countdown = input("How many seconds are left until launch\n> ")
-
-
-
 oxygen_tanks = input("How many oxygen tanks are required in the mission\n> ")
 oxygen_tanks = input("Confirm the oxygen supply")
-
-
-
 food_packs = input("How many foods packs do you have\n> ")
-
-
-
 water_packs = input("How many water packs do you have stored\n> ")
 print(countdown)
 print(oxygen_tanks)
 print(food_packs)
-
 print(water_packs)

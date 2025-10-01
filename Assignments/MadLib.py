@@ -1,0 +1,5 @@
+noun = input("Give me a noun\n>")
+verb = input ("Give me a verb\n>")
+name = input("Give me a name\n>")
+animal = input("Give me a amimal\n>")
+sport = input("Give me a sport\n>")

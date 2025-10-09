@@ -4,7 +4,7 @@
 sentence = input("Give me a sentence\n>")
 print(sentence.upper())
 print(sentence.strip())
-print(semtemce.replace("bad" , "good"))
+print(sentence.replace("bad" , "good"))
 
 if sentence.endwith("."):
     print(True)

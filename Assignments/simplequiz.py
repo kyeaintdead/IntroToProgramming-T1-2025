@@ -18,7 +18,7 @@ def simplequiz():
    
 
 
-    if answer4 == "Nike":
+    if answer4.lower() == "nike":   
        score = score + 1
     
        
@@ -27,13 +27,13 @@ def simplequiz():
     
     
 
-    if answer2 == "Cereal":
+    if answer2.lower() == "cereal":
         score = score + 1
    
-    if answer3 == "STMA":
+    if answer3.lower() == "stma":
         score = score + 1 
     
-    if answer5 == "chicken":
+    if answer5.lower() == "chicken":
          score = score + 1
     
     print("SCORE:  "  + str(score) + "/5")

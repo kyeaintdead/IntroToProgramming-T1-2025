@@ -9,6 +9,6 @@ num2 = int(input("Give me another interger\n>"))
 num3 = int(input("Give me the final interger\n>"))
 
 
-def add_three(num1, num2,num3):
+def add_three(a, b, c):
     print(num1 + num2 + num3)
     add_three(int(num1), int(num2), int(num3))

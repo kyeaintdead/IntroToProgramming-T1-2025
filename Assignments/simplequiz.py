@@ -18,7 +18,7 @@ def simplequiz():
    
 
 
-    if answer4.lower() == "nike":   
+    if answer4.lower() == "4":   
        score = score + 1
     
        

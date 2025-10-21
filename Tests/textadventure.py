@@ -6,7 +6,7 @@
 def start_fantasy():
     print("You just woke up in a alley way exhausted. What do you do:")
     print("1. Look around see if theres any people")
-    print("2. Rest up regain your energy and think of the predicament you are in")
+    print("2.  Find a hiding spot and Rest up regain your energy and think of the predicament you are in")
     print("3. Pick up the random coin on the ground could be useful")
     
     choice = input("> ")
@@ -36,4 +36,8 @@ def bandit_fight():
         alleyway_help()
     else:
         print("Invalid. Try again")
+
+def strength_regain():
+    print("You find your hiding spot and sleep thinking how you got into this mess. A sudden scream awakes you and you see a woman getting robbed by bandits. What do you do?")
+    
 start_fantasy()

@@ -75,7 +75,7 @@ def gluttony_bad():
     choice = input("> ")
     if choice == "1":
         print("Who am I?")
-        gluttony_bad()
+       
     elif choice == "2": 
         print("Colors.... Colors....")
        

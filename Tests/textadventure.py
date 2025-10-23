@@ -64,30 +64,152 @@ def start_discard():
         gluttony_bad()
     else:
         print("Invalid. Try again")
+        start_discard()
+
+
+
 
 def gluttony_bad():
-    print("You try to stalk the man he instantly spots you. He goes over to you and then .... Who am I?")
-    print("1. My name My name My name")
-    print("2. Whole again....")
-    print("3. I am...")
-          
-    
+    while True:
+        print("You try to stalk the man he instantly spots you. He goes over to you and then .... Who am I?")
+        print("1. My name My name My name")
+        print("2. Whole again....")
+        print("3. I am...")
+
+        choice = input("> ")
+
+        if choice == "1":
+            print("Who am I?")
+            
+        elif choice == "2": 
+            print("Colors.... Colors....")
+            
+        elif choice == "3":
+            print("I am " + name + "...")
+            gluttony_sorrow()
+            break   
+            
+        else:
+            print("Invalid. Try again")
+       
+
+def gluttony_sorrow():
+    while True:
+        print("Your starving almost to the point where your stomach is dangerously close to sticking to your back how dangerous... how dangerous...")
+        print("1. Look at a mirror")
+        print("2. Look at a mirror")
+        print("3. Look at a mirror")
+        
+        choice = input("> ")
+        if choice == "1":
+            print("You look different, malformed")
+        elif choice == "2":
+            print("You feel hungry")
+        elif choice == "3":
+            print("You smash the mirror. It's time to get something to eat, I need a weapon first")
+            gluttony_plaza()
+            break
+        else:
+            print("Invalid. Try again")
+
+def gluttony_plaza():
+    print("Yuu have to get a weapon. You arrive at the plaza and go to the weapons dealer. What will you do to him")
+    print("1. Ask him if he knows you")                       # trying to regain yourself route 
+    print("2. Kill him and take a weapon")                    # alternative gluttony sub path, murder becomes a habit route 
+    choice = input("> ") 
+    if choice == "1":
+        gluttony_dealer()
+    elif choice == "2": 
+        gluttony_dealer1()
+    else:
+        print("Invalid. Try again.")
+        gluttony_plaza()
+def gluttony_dealer():
+    while True:
+        print("He says he seen you around before and says your name " + name + " That triggers something in you...") 
+        print("1. Kill him")
+        print("2. Kill him")
+        print("3. Kill him")
+        choice = input("> ")
+        if choice == "1":
+            print("Take his memories")
+        elif choice == "3":
+            print("I need to find out who I am")
+        elif choice == "2":
+            print("I remember something about myself")
+            gluttony_rememberance()
+            break
+        else:
+            print("invalid. Try again")
+
+def gluttony_rememberance():
+    while True:
+        print("You feel sparks in your head, Your breathing is heavy, you feel nauseous, But suddenly you recall something")
+        
+        print("1. I am Arno Gratz")
+        print("2. No I don't know what I'm gonna do next Arno")
+        print("3. GET AWAY FROM ME")
+        choice = input("> ") 
+        if choice == "1":
+            print("Hey " + name + " Your asking me if I seen you around?. Course I have! Hey why are you looking at me that way?")
+            
+        elif choice == "2":
+            print("My name is Arno Gratz. I am 27 years old and I started selling weapons at the ripe age of 19. I'm soon to be married to my fiance I can't wait")
+        elif choice == "3":
+            print("I had many customers come and go looking different after a while but something seemed off about " + name + " today.")
+            gluttony_recalling()
+            break
+        else:
+            print("Invalid. Try again")
+            
+def gluttony_recalling():
+    print("Seems like you discovered that you can re live a persons life if you kill them. You remember the previous you talking to the shop keeper they seem nice. Why can I see Arno right beside me?")
+    print("1. Visit Arnos fiance")
+    print("2. Talk to Arno")
     choice = input("> ")
     if choice == "1":
-        print("Who am I?")
-       
-    elif choice == "2": 
-        print("Colors.... Colors....")
-       
-    elif choice == "3":
-        print("I am " + name)
-        gluttony_sorrow()
+        Arnos_fiance()
+    elif choice == "2":
+        Arno_Dialogue()
     else:
         print("Invalid. Try again")
-        gluttony_bad()
+        gluttony_recalling()
+
+
+def Arno_Dialogue():
+    while True:
+        print("Arno: It's alright " + name + " I don't hold it against you. What you are seeing is just a mere apparation created from your mind from the memories you gained")
+        print("1. I'm sorry Arno but it's for the best")
+        print("2. Push forward")
+        choice = input("> ")
+        if choice == "1":
+            print("You see Arno vanish from your vision. You must stay in control over yourself")
+        elif choice == "2":
+            gluttony_power()
+        else:
+            print("Invalid. Try again")
+            Arno_Dialogue()
+
+            
 
 
 
+
+
+
+
+def Arnos_fiance():
+    print("With the memories of Arno you know exactly where his house is. You arrive at his house and find his fiance in the living room. Arno looks at you with a pleading look")
+    print("1. Kill her")
+    choice = input("> ")
+    if choice == "1":
+        Mending_Together()
+    else:
+        print("Invalid. Try again")
+        Arnos_fiance()
+
+def Mending_Together():                     # maybe add a alternative ending here 
+    print("MENDING TOGETHER ENDING. After killing Arnos fiance the real way to find yourself again is killing others to regain your memory of your past self. Due to the killings you gained enough sin to be classified as chaotic you're both powerful and cold now.")
 
 
 def Heads_plaza():
@@ -105,7 +227,7 @@ def Heads_plaza():
         beggar_teleport()
     else:
         print("Invalid. Try again")
-        Heads_plaza
+        Heads_plaza()
 
 def Tails_plaza():
     print("So you have chosen Tails... You will take a much more brutal approach on things. You arrive at the plaza and see a beggar. What will you do?")
@@ -142,7 +264,7 @@ def bandit_fight():
 
 def Ruthless_pride():
     print("You decide to kill the three bandits with the stick you found on the ground. As you were cleaning off the blood off you spot a figure in a dark cloak. What will you do?")
-    print("1. Try to kill him no witnesses aloud")
+    print("1. Try to kill him no witnesses aloud!")
     print("2. Run away. I can't get caught yet!")
     print("3. Go up to the figure and ask if he saw what you did")
     
@@ -156,6 +278,9 @@ def Ruthless_pride():
     else:
         print("Invalid. Try again") 
         Ruthless_pride()
+
+def pride_death():
+    print("EGO DEATH ENDING, Due to your own ego of thinking you're on top of the world you died! The hooded man was a powerful individual who was a chaotic, you met a untimely end")
 
 def pride_Assassin():
     print("The hooded man says he did!. He saw your combat abilitys and ruthlessness, he wishes to recruit you to some Assassin cult. Any questions?. What will you ask him:")

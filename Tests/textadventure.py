@@ -15,6 +15,9 @@
 #greed will have the player acting selfishly for their own benefit 
 # true route. the player will have to make careful choices for others and themselves in order to acheive true happiness
 name = input("What is your name? \n> ")
+print("WARNING. This game is heavily dark and relys on careful choice making. A simple choice can change your route for the worst, but this game doesn't have any wrong choices")
+print("The Ultimate goal of the game is to return back to your previous world since in this setting you have been transported in a alternate world with horrors")
+money = 0
 copper_coin = "1"
 def start_fantasy():
     print("You just woke up in a alley way exhausted. What will you do:")
@@ -113,7 +116,7 @@ def gluttony_sorrow():
             print("Invalid. Try again")
 
 def gluttony_plaza():
-    print("Yuu have to get a weapon. You arrive at the plaza and go to the weapons dealer. What will you do to him")
+    print("You have to get a weapon. You arrive at the plaza and go to the weapons dealer. What will you do to him")
     print("1. Ask him if he knows you")                       # trying to regain yourself route 
     print("2. Kill him and take a weapon")                    # alternative gluttony sub path, murder becomes a habit route 
     choice = input("> ") 
@@ -141,6 +144,7 @@ def gluttony_dealer():
             break
         else:
             print("invalid. Try again")
+            gluttony_dealer()
 
 def gluttony_rememberance():
     while True:
@@ -191,7 +195,10 @@ def Arno_Dialogue():
             Arno_Dialogue()
 
             
-
+def gluttony_power():
+    print("From Arnos memories you find out the coordinates of a place that can lead you to power")
+    print("1. Go to the watch tower")
+    print("2. ")
 
 
 
@@ -209,7 +216,7 @@ def Arnos_fiance():
         Arnos_fiance()
 
 def Mending_Together():                     # maybe add a alternative ending here 
-    print("MENDING TOGETHER ENDING. After killing Arnos fiance the real way to find yourself again is killing others to regain your memory of your past self. Due to the killings you gained enough sin to be classified as chaotic you're both powerful and cold now.")
+    print("MENDING TOGETHER ENDING. After killing Arnos fiance you think of the real way to find yourself again is by killing others to regain your memory of your past self. Due to the killings you gained enough sin to be classified as chaotic you're both powerful and cold now. You go around the world asking others if they know you.")
 
 
 def Heads_plaza():
@@ -262,6 +269,32 @@ def bandit_fight():
         print("Invalid. Try again")
         bandit_fight()
 
+
+def plaza():
+    print("You fled out of the alley way and arrived at the plaza")
+    print("With nothing to your name you decide to find a job to get some money on your name")
+    print("1. Take a job as a waiter at a local cafe")
+    print("2. Take a job as a Adventurer")
+    
+    choice = input("> ")
+    if choice == "1":
+        waiter_job()
+    elif choice == "2":
+        Adventurer_job()
+    else:
+        print("Invalid. Try again")
+        plaza()
+
+def waiter_job():
+    print("You decided to work for a couple of months at the cafe in till you had enough money to get a house and a steady living for yourself.")
+    print("Since you have the resources now after gathering info for months you can do some research about a rumour of a way to transport to another world")
+    
+
+
+
+
+
+
 def Ruthless_pride():
     print("You decide to kill the three bandits with the stick you found on the ground. As you were cleaning off the blood off you spot a figure in a dark cloak. What will you do?")
     print("1. Try to kill him no witnesses aloud!")
@@ -312,11 +345,38 @@ def pride_ending():
 
 def pride_alone():
     print("After ignoring the strange man you decide to go off on your own")
-    print("1. Go to the plaza")
-    print("2. Go outside of the town")
-    print("Summon ")  
+    print("1. Sin")
+
+    choice = input("> ")
+    if choice == "1":
+        pride_power()
+    else:
+        print("Invalid. Try again")
+        pride_alone()
+
+
+def pride_power():
+    print("You realize you accumalated enough sin to become slighty chaotic. You can summon a fire spirit, you're fairly powerful now. What will you do?")
+    print("1. Summon the fire spirit onto the town")
+    print("2. Orderly")
+    choice = input("> ")
+    if choice == "1":
+        fire_chaotic()
+    elif choice == "2":
+        fire_sacrfice()
+    else:
+        print("Invalid. Try again")
+
+
+def fire_chaotic():
+    print("You used the fire spirit to burn down the whole Town. You gained even more sin resulting in you becoming a true chaotic.")
+
+
+def fire_sacrfice():
+    print("You felt bad for your past actions... You self atone and feel a flaming in your heart you feels your sins have been forgiven but... nothing comes without a cost. You felt relived with yourself as you were laying down on the cold ground feeling your heart beat get fainter")
+
     
-     
+        
     
 
 def strength_regain():
@@ -324,4 +384,82 @@ def strength_regain():
     print("1. Shes in trouble I have to help her")
     print("2. Screw her I'll stay hidden safe so I don't get hurt")
     print("3. Those bandits look useful I could use them to accomplish my goal. I'll go recruit them")
+    choice = input("> ")
+    if choice == "1":
+        virtue_help()
+    elif choice == "2":
+        sloth_guilt()
+    elif choice == "3":
+        wrath_if()
+    else:
+        print("Invalid. Try again")
+        strength_regain()
+
+def virtue_help():
+    print("You saved the woman and she thanks you")
+    print("You recieve some Money. What will you spend it on?")
+    print("1. Some food")
+    print("2. A weapon")
+    choice = input("> ")
+    if choice == "1":
+        virtue_food()
+    elif choice == "2":
+        virtue_weapon()
+    else:
+        print("Invalid. Try again")
+        virtue_help()
+
+
+
+
+def virtue_weapon():                    # might need a global variable for a weapon here 
+    print("")
+
+def virtue_food():
+    print("You decide to use the money to buy some food. You arrive at the plaza and buy some. You see a beggar that looks hungry. What will you do?")
+    print("1. Give food to the beggar")
+    print("2. Eat the food in his face")
+    choice = input("> ")
+    if choice == "1":
+        virtue_skill()
+    elif choice == "2":
+        cursed_route()
+    else:
+        print("Invalid. Try again")
+        virtue_food()
+
+def cursed_route():
+    print("You ate the food infront of the beggar. The beggar starves to death. You don't feel any remorse but you feel like your heart is getting wrapped in thorns")
+    print("You have been cursed by the beggars spirit you now walk with the thorns cursed. Anyone who interacts with you will feel immense pain if they come in a 30 feet radius of you")
+    print("1. Lonesome")
+    choice = input("> ")
+    if choice == "1":
+        Of_Thorns()
+    else:
+        print("Invalid. Try again")
+        cursed_route()
+
+
+
+def Of_Thorns():
+    print("KING OF THORNS ENDING. After becoming cursed you lived a life of solitude. You decided living only a life of solitude wouldn't be fair to yourself so you take over a nation with your curse and become known as the King Of Thorns")
+        
+
+
+
+
+def virtue_skill():
+    print("You decided to be generous and give some of your food to the beggar. He's very grateful and actually gives you a magical scroll")
+    print("You used the magical scroll and obtained the spell Teleport")
+    print("1. Teleport")
+    choice = input("> ")
+    if choice == "1":
+        virtue_ending()
+    else:
+        print("Invalid. Try again")
+        virtue_skill()
+
+
+def virtue_ending():
+    print("VIRTUE ENDING. You have been very generous throughout this journey, You used the spell Teleport and returned to your original world free from the suffering.")
 start_fantasy()

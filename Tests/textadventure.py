@@ -57,17 +57,16 @@ def coin_route():
 
 def start_discard():
     print("You discarded the coin. You feel a wave of relief. You see a hooded man and feel drawn to him. What will you do?")
-    print("1. Talk to him")
-    print("2. Investigate him")
+    
+    print("1. Investigate him")
 
     choice = input("> ")
     if choice == "1":
-        gluttony_good()                             # this leads to entrance to the gluttony route into the true ending
-    elif choice == "2":                             # this is the entrance to the alternate gluttony route 
-        gluttony_bad()
+        gluttony_bad()                        # this leads to entrance to the gluttony route into the true ending
     else:
         print("Invalid. Try again")
         start_discard()
+
 
 
 
@@ -127,6 +126,28 @@ def gluttony_plaza():
     else:
         print("Invalid. Try again.")
         gluttony_plaza()
+
+def gluttony_dealer1():
+    print("You kill the weapons dealer and get a weapon. You feel yourself gain some sin")
+    print("You realize you can the weapon to sever yourself from the man")
+    print("Sever your relation with the man")
+    choice = input("> ")
+    if choice == "1":
+        gluttony_severance()
+    else:
+        print("Invalid. Try again")
+
+
+
+
+def gluttony_severance():
+    print("SEVERANCE ENDING. You used your weapon and infused some of the sin you got from killing that man to sever the connection you had with the hooded man.")
+    print("You regain your senses but after you severed the connection the hooded man swiftly kills you")
+
+
+
+
+
 def gluttony_dealer():
     while True:
         print("He says he seen you around before and says your name " + name + " That triggers something in you...") 
@@ -198,9 +219,32 @@ def Arno_Dialogue():
 def gluttony_power():
     print("From Arnos memories you find out the coordinates of a place that can lead you to power")
     print("1. Go to the watch tower")
-    print("2. ")
+    choice = input("> ")
+    if choice == "1":
+        watchtower()
+    else:
+        print("Invalid. Try again")
+        gluttony_power()
+
+def watchtower():
+    print("You arrive at the watchtower and see a library. book shelves of filled with books all around you")
+    print("You see some books you are interested in 2 especially. Which one do you read?")
+    print("1. Book 1")
+    print("2. Book 2")
+    choice = input("> ")
+    if choice == "1":
+        I_am()
+    elif choice == "2":
+        Im_myself()
+    else:
+        print("Invalid. Try again")
+
+def I_am():
+    print("I AM ENDING. You read the book and relive another persons life. You felt like you actually were that person it felt kinda good. You began reading endless books in till you didn't even know who you were anymore")
 
 
+def Im_myself():
+    print("IM MYSELF ENDING. You chose the 2nd book and realize this is your book. You relive your entire life re claiming back your identity.")
 
 
 
@@ -236,6 +280,22 @@ def Heads_plaza():
         print("Invalid. Try again")
         Heads_plaza()
 
+def beggar_fire():
+    print("You obtain a fire spell from the beggar. What will you do?")
+    print("1. Use the fire spell")
+    choice = input("> ")
+    if choice == "1":
+        fire_spell()
+    else:
+        print("Invalid. Try again")
+
+def fire_spell():
+    print("FIRE SPELL DEATH. Never take spells from strangers when you used the spell it exploded in your face")
+
+
+
+
+
 def Tails_plaza():
     print("So you have chosen Tails... You will take a much more brutal approach on things. You arrive at the plaza and see a beggar. What will you do?")
     print("1. Bash his head in")
@@ -270,6 +330,49 @@ def bandit_fight():
         bandit_fight()
 
 
+def alleyway_help():
+    print("You screamed for help and a person with orange hair clad with armor defends you against the bandits")
+    print("He introduces himself at Ken and offers you a home since he sees you have nothing to your name accept?")
+    print("1. Accept his offer")
+    print("2. Decline")
+    choice = input("> ")
+    if choice == "1":
+        help_ref()
+    elif choice == "2":
+        homeless_bum()
+    else:
+        print("Invalid. Try again")
+        alleyway_help()
+
+
+def homeless_bum():
+    print("HOMELESS BUM ENDING. The man felt a little hurt and you walk away, turns out that was not the move you end up bumming around trying to keep yourself up but the opprotunitys just weren't in favor of you")
+
+
+
+def help_ref():
+    print("He brings you to his mansion. He asks if you have anywhere else to go and see you don't see he employs you as a worker at his house")
+    print("1. Thank him")
+    print("2. Plot")
+    choice = input("> ")
+    if choice == "1":
+        employment_ending()
+    elif choice == "2":
+        plot_ending()
+    else:
+        print("Invalid. Try again")
+        help_ref()
+
+def employment_ending():
+    print("EMPLOYMENT ENDING. You accept the mans request and become employed in his estate you lived your life peacefully with a nice income")
+
+def plot_ending():
+    print("PLOTTING ENDING. You accept the mans request but you secretly plot to kill the man so you can inherit his estate")
+    print("After a few years you eventually poison the man and inherit his estate")
+
+
+
+
 def plaza():
     print("You fled out of the alley way and arrived at the plaza")
     print("With nothing to your name you decide to find a job to get some money on your name")
@@ -288,7 +391,30 @@ def plaza():
 def waiter_job():
     print("You decided to work for a couple of months at the cafe in till you had enough money to get a house and a steady living for yourself.")
     print("Since you have the resources now after gathering info for months you can do some research about a rumour of a way to transport to another world")
-    
+    print("1. Research Teleport")
+    choice = input("> ")
+    if choice == "1":
+        waiter_ending()
+    else:
+        print("Invalid. Try again")
+        waiter_job()
+
+def waiter_ending():
+    print("WAITER ENDING. You worked for a while at the cafe and used your combined research to build a portal to teleport to your original world")
+
+def Adventurer_job():
+    print("You got a job as a adventurer and worked for a bit killing monster and gaining orderly after you had enough orderly you could use the skill teleport")
+    print("1. Teleport")
+    choice = input("> ")
+    if choice == "1":
+        Adventurer_ending()
+    else:
+        print("Invalid. Try again")
+        Adventurer_job()
+
+def Adventurer_ending():
+    print("HIGH ORDERLY ENDING.You became a high orderly and used the teleport to go back to your original world")
+
 
 
 
@@ -311,6 +437,9 @@ def Ruthless_pride():
     else:
         print("Invalid. Try again") 
         Ruthless_pride()
+
+
+
 
 def pride_death():
     print("EGO DEATH ENDING, Due to your own ego of thinking you're on top of the world you died! The hooded man was a powerful individual who was a chaotic, you met a untimely end")
@@ -366,14 +495,15 @@ def pride_power():
         fire_sacrfice()
     else:
         print("Invalid. Try again")
+        pride_power()
 
 
 def fire_chaotic():
-    print("You used the fire spirit to burn down the whole Town. You gained even more sin resulting in you becoming a true chaotic.")
+    print("HIGH CHAOTIC ENDING. You used the fire spirit to burn down the whole Town. You gained even more sin resulting in you becoming a true chaotic.")
 
 
 def fire_sacrfice():
-    print("You felt bad for your past actions... You self atone and feel a flaming in your heart you feels your sins have been forgiven but... nothing comes without a cost. You felt relived with yourself as you were laying down on the cold ground feeling your heart beat get fainter")
+    print("REDEMPTION ENDING. You felt bad for your past actions... You self atone and feel a flaming in your heart you feels your sins have been forgiven but... nothing comes without a cost. You felt relived with yourself as you were laying down on the cold ground feeling your heart beat get fainter")
 
     
         
@@ -395,6 +525,22 @@ def strength_regain():
         print("Invalid. Try again")
         strength_regain()
 
+
+def sloth_guilt():
+    print("You hide and see the woman get robbed. After a while you run away not wanting to be in that area")
+    print("You feel paranoid so scared in fact you want to run away from this town")
+    print("1. Move continents")
+    choice = input("> ")
+    if choice == "1":
+        sloth()
+    else:
+        print("Invalid. Try again")
+        sloth_guilt()
+
+def sloth():
+    print("PARANOID ENDING. You're constanstly scared of your surroundings after that day even to the point where you keep yourself up at night.")
+
+
 def virtue_help():
     print("You saved the woman and she thanks you")
     print("You recieve some Money. What will you spend it on?")
@@ -413,7 +559,35 @@ def virtue_help():
 
 
 def virtue_weapon():                    # might need a global variable for a weapon here 
-    print("")
+    print("You obtained the weapon")
+    print("1. Go fight some bad guys")
+    print("2. Resell the weapon")
+    choice = input("> ")
+    if choice == "1":
+        badguy_virtue()
+    elif choice == "2":
+        resell_route()
+    else:
+        print("Invalid. Try again")
+        virtue_weapon()
+
+def badguy_virtue():
+    print("You used your weapon to fight some bandits. You didn't kill them which gained you orderly")
+    print("You could use some of your orderly to Teleport")
+    print("1. Teleport")
+    choice = input("> ")
+    if choice == "1":
+        print("TELEPORT ENDING?. You used Teleport to try to return to your original world but end up it an entirely different world.")
+
+    else:
+        print("Invalid. Try again")
+        badguy_virtue()
+        
+def resell_route():
+    print("RESELLING ENDING. You began reselling weapons in till you were immensely rich and you were able to live comfortably in the new world")
+
+
+
 
 def virtue_food():
     print("You decide to use the money to buy some food. You arrive at the plaza and buy some. You see a beggar that looks hungry. What will you do?")

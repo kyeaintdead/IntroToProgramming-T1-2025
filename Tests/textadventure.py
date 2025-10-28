@@ -17,6 +17,7 @@
 name = input("What is your name? \n> ")
 print("WARNING. This game is heavily dark and relys on careful choice making. A simple choice can change your route for the worst, but this game doesn't have any wrong choices")
 print("The Ultimate goal of the game is to return back to your previous world since in this setting you have been transported in a alternate world with horrors")
+print("This game follow aspects of the seven deadly sins. Will you fall to sin or succeed in virtue?")
 money = 0
 copper_coin = "1"
 def start_fantasy():
@@ -129,13 +130,14 @@ def gluttony_plaza():
 
 def gluttony_dealer1():
     print("You kill the weapons dealer and get a weapon. You feel yourself gain some sin")
-    print("You realize you can the weapon to sever yourself from the man")
-    print("Sever your relation with the man")
+    print("You realize you can use the weapon to sever yourself from the man")
+    print("1. Imbue your weapon with chaotic and sever your relation with the man")
     choice = input("> ")
     if choice == "1":
         gluttony_severance()
     else:
         print("Invalid. Try again")
+        gluttony_dealer1()
 
 
 
@@ -280,6 +282,76 @@ def Heads_plaza():
         print("Invalid. Try again")
         Heads_plaza()
 
+
+def beggar_dagger():
+    print("You purchased a dagger")
+    print("1. Heads")
+    print("2. Tails")
+    choice = input("> ")
+    if choice == "1":
+        heads_dagger()
+    elif choice == "2":
+        tails_dagger()
+    else:
+        print("Invalid. Try again")
+        beggar_dagger()
+
+
+def heads_dagger():
+    print("So you have chosen heads. You will be forced to take a kinder approach on things. You use the dagger for what?")
+    print("1. Go outside of town and clear out the monster infestation")
+    print("2. Go to a dungeon")
+    choice = input("> ")
+    if choice == "1":
+        monster_infestation()
+    elif choice == "2":
+        dungeon()
+    else:
+        print("Invalid. Try again")
+        heads_dagger()
+
+def monster_infestion():
+    print("You went to go clear out the monsters outside of the town. Your good deeds uplift you")
+    print("You feel yourself becoming a orderly")
+    print("You feel the coins influence on you fade away. You're much stronger now")
+    print("1. Take on a chaotic")
+    choice = input("> ")
+    if choice == "1":
+        chaotic_fight()
+    else:
+        print("Invalid. Try again")
+
+def chaotic_fight():
+    print("You need to find a chaotic in order to become a pillar of strength in this world")
+    print("You find a chaotic but hes already one step ahead of you")
+    print("Death.")
+    print("Death.")
+    print("Death.")
+    print("He's trying to brain wash you!. What will you do?")
+    print("1. Imbue your dagger with some of your orderly and try to stab him")
+    print("2. Use your orderly to cast a spell")
+    choice = input("> ")
+    if choice == "1":
+       orderlyinsanity()
+    elif choice == "2":
+        highpillar()
+    else:
+        print("Invalid. Try again")
+        chaotic_fight()
+
+def highpillar():
+    print("PILLAR OF THE WORLD ENDING. You defend against the brain wash and swiftly defeat the chaotic with one of your spells. You feel yourself ascending and become the epitome of orderly. You have the power to return to your world but your find with this outcome")
+    
+def orderlyinsanity():
+    print("LOST MAYHEM ENDING. You fail to defend against the brain washing and get defeated instead of you ascending the chaotic ascends as a higher being of chaotic. Who knows how doomed the world is now")
+        
+
+    
+
+
+        
+    
+
 def beggar_fire():
     print("You obtain a fire spell from the beggar. What will you do?")
     print("1. Use the fire spell")
@@ -288,6 +360,7 @@ def beggar_fire():
         fire_spell()
     else:
         print("Invalid. Try again")
+        beggar_fire()
 
 def fire_spell():
     print("FIRE SPELL DEATH. Never take spells from strangers when you used the spell it exploded in your face")

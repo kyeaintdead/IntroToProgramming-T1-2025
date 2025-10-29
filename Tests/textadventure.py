@@ -14,7 +14,14 @@
 #greed intitation is for the player to also have the coin but eventually discard for something better
 #greed will have the player acting selfishly for their own benefit 
 # true route. the player will have to make careful choices for others and themselves in order to acheive true happiness
-name = input("What is your name? \n> ")
+while True:
+    name = input("What is your name? \n> ").strip()
+    if not name:  
+        print("You must enter a name.")
+    elif name.isdigit():  
+        print("Names cannot be numbers. Try again.")
+    else:
+        break  
 print("WARNING. This game is heavily dark and relys on careful choice making. A simple choice can change your route for the worst, but this game doesn't have any wrong choices")
 print("The Ultimate goal of the game is to return back to your previous world since in this setting you have been transported in a alternate world with horrors")
 print("This game follow aspects of the seven deadly sins. Will you fall to sin or succeed in virtue?")
@@ -72,7 +79,7 @@ def start_discard():
 
 
 
-def gluttony_bad():
+def gluttony_bad():        #check this for later
     while True:
         print("You try to stalk the man he instantly spots you. He goes over to you and then .... Who am I?")
         print("1. My name My name My name")
@@ -240,6 +247,7 @@ def watchtower():
         Im_myself()
     else:
         print("Invalid. Try again")
+        watchtower()
 
 def I_am():
     print("I AM ENDING. You read the book and relive another persons life. You felt like you actually were that person it felt kinda good. You began reading endless books in till you didn't even know who you were anymore")
@@ -283,6 +291,28 @@ def Heads_plaza():
         Heads_plaza()
 
 
+def beggar_teleport():
+    print("The beggar thanks you and gives you a teleport scroll use it?")
+    print("1. Yes")
+    print("2. No")
+    choice = input("> ")
+    if choice == "1":
+        tp_void()
+    elif choice == "2":
+        kept_tp()
+    else:
+        print("Invalid. Try again")
+        beggar_teleport()
+
+
+def tp_void():
+    print("VOID ENDING. You teleported in a black space no sound or light is here only void")
+
+
+def kept_tp():
+    print("DUMB ENDING. You have one chance to use the teleport scroll and you said no?")
+
+
 def beggar_dagger():
     print("You purchased a dagger")
     print("1. Heads")
@@ -295,6 +325,50 @@ def beggar_dagger():
     else:
         print("Invalid. Try again")
         beggar_dagger()
+
+
+
+
+def tails_dagger():
+    print("So you have chosen tails. You will be forced to take a more brutal approach on things")
+    print("1. Use the dagger.")
+    print("2. Rob someone")
+    choice = input("> ")
+    if choice == "1":
+        chaotic_pathway()
+    elif choice == "2":
+        robbing()
+    else:
+        print("Invalid. Try again")
+        tails_dagger()
+
+def chaotic_pathway():
+    print("You began to viciously kill everybody nearby gaining more chaotic for each kill.")
+    print("You feel the coins influence on you has faded")
+    print("In order for you to ascend you have to kill a orderly")
+    print("You see one in the distance and you make your move")
+    print("1. Imbue your dagger with chaotic")
+    print("2. Use your chaotic to influence them")
+    choice = input("> ")
+    if choice == "1":
+        chaotic_death()
+    elif choice == "2":
+        chaotic_pillar()
+    else:
+        print("Invalid. Try again")
+        chaotic_pathway()
+
+
+def chaotic_death():
+    print("CHAOTIC DEMISE ENDING. Bad idea the orderly got the upper hand on you when they clashed with your dagger. You met an untimely end")
+
+def chaotic_pillar():
+    print("CHAOTIC PILLER ENDING. You killed the orderly and ascended as the epitome of chaotic. You're fine with the way things are and decide not to go back to your own world")
+
+
+def robbing():
+    print("JAIL ENDING. You robbed a person but got caught right after you sit here with a sentence of 20 years.")
+
 
 
 def heads_dagger():
@@ -310,7 +384,32 @@ def heads_dagger():
         print("Invalid. Try again")
         heads_dagger()
 
-def monster_infestion():
+
+def dungeon():
+    print("You arrive at the dungeon. Fight the boss?")
+    print("1. Yes")
+    print("2. No")
+    choice = input("> ")
+    if choice == "1":
+        dungeon_boss()
+    elif choice == "2":
+        print("Nah, you gotta do it")
+        dungeon()
+    else:
+        print("Invalid. Try again")  
+        dungeon()
+
+def dungeon_boss():
+    print("BOSS ENDING. You fought and won against the boss nice")
+        
+
+
+
+
+
+
+
+def monster_infestation():
     print("You went to go clear out the monsters outside of the town. Your good deeds uplift you")
     print("You feel yourself becoming a orderly")
     print("You feel the coins influence on you fade away. You're much stronger now")
@@ -486,7 +585,7 @@ def Adventurer_job():
         Adventurer_job()
 
 def Adventurer_ending():
-    print("HIGH ORDERLY ENDING.You became a high orderly and used the teleport to go back to your original world")
+    print("ADVENTURER ENDING. You gained enough orderly to teleport back to your world")
 
 
 
@@ -597,6 +696,105 @@ def strength_regain():
     else:
         print("Invalid. Try again")
         strength_regain()
+
+
+def wrath_if():
+    print("You decide to recruit the bandits. They could be helpful but first the woman. What will you do?")
+    print("1. ...")
+    print("2. Spare her")
+    choice = input("> ")
+    if choice == "2":
+        wrath_spare()
+    elif choice == "1":
+        wrath_sin()
+    else:
+        print("Invalid. Try again")
+        wrath_if
+
+
+
+
+
+def wrath_sin():
+    print("You walk out of the alley and hear some noises you chose to ignore that doesn't matter anymore. You have to recruit others to acheive your goal")
+    print("You see a weird coin on the ground. Will you pick it up?")
+    print("1. Pick it up")
+    print("2. Don't pick it up")
+    choice = input("> ")
+    if choice == "1":
+        wrath_definite()
+    elif choice == "2":
+        wrathit()
+    else:
+        print("Invalid. Try again")
+        wrath_sin
+
+
+
+def wrathit():
+    print("You decide not to pick it up. You have work to do but you feel to untrusty to the point you decide not to recruit anyone else.")
+    print("You felt a bit more powerful after you left the alleyway so you decide that how you will complete your goal.")
+    print("1. Call the bandits over to you and ....")
+    choice = input("> ")
+    if choice == "1":
+        
+    else:
+        print
+
+
+def wrath_definite():
+    print("You picked up the coin and you felt the coins influence fully control you.")
+    print("You suddenly felt very paranoid you need trust worthy people around you.")
+    print("1. Imbue chaotic into the coin and flip it.")
+    choice = input("> ")
+    if choice == "1":
+        wrath_king()
+    else:
+        print("Invalid. Try again.")
+        wrath_definite()
+
+def wrath_king():
+    print("You gained glimpses of people you need to recruit in your mind. You tell your subordinates to recruit these specific people.")
+    print("You hear rumours of a mysterious scroll that can teleport people. You decide to do the most effecient route you know")
+    print("1. Wrath.")
+    choice = input("> ")
+    if choice == "1":
+        wrath_ending()
+    else:
+        print("Invalid. Try again.")
+        wrath_king()
+
+def wrath_ending():
+    print("WRATH ENDING. You monopolize the underground market in order for the scroll to circulate to you. You aren't very trusting towards any of your subordinates so you decide if they should die or not. The scroll never gets to you so now you sit their paranoid of the people around you and the people being afraid of you with the reputation of The King of Eradication")
+
+
+
+
+
+def wrath_spare():
+    print("I don't need her anyway. You tell the bandits to gather information around town. You need to start recruiting people in order to acheive my goal.")
+    print("The group comes back and tells you about a mysterious scroll going around the merchant system said to be able to teleport people and things")
+    print("What will you do in order to achieve this scroll?")
+    print("1. Monopoly the merchant market")
+    print("2. Recruit more people")
+    choice = input("> ")
+    if choice == "2":
+        wrath_betrayal()
+    elif choice == "1":
+        wrath_merchants()
+    else:
+        print("Invalid. Try again")
+        wrath_spare()
+
+
+def wrath_merchants():
+    print("MONOPOLIZATION ENDING. You recruited all the active merchants in the market and becamt dominant in the market. The scroll circulated to you and you used it to return to your original world")
+
+
+
+def wrath_betrayal():
+    print("BETRAYAL ENDING. You ended up recruiting more people but the people you recruited weren't that trut worthy and took your life for the info you had")
+
 
 
 def sloth_guilt():

@@ -737,9 +737,9 @@ def wrathit():
     print("1. Call the bandits over to you and ....")
     choice = input("> ")
     if choice == "1":
-        
+        pending_wrath()
     else:
-        print
+        print("Invalid. Try again")
 
 
 def wrath_definite():

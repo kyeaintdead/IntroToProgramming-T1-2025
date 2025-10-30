@@ -220,6 +220,7 @@ def Arno_Dialogue():
             print("You see Arno vanish from your vision. You must stay in control over yourself")
         elif choice == "2":
             gluttony_power()
+            break
         else:
             print("Invalid. Try again")
             Arno_Dialogue()
@@ -484,6 +485,72 @@ def Tails_plaza():
         print("Invalid Try again.")
         Tails_plaza()
 
+
+
+def beggar_belongings():
+    print("The things you gotten after stealing from the beggar are: Fire scroll, Teleport scroll, Dagger")
+    print("1. Use coin")
+    print("2. Use coin")
+    print("3. Use coin")
+    choice = input("> ")
+    if choice == "1":
+        print("The coin start levitating towards the items")
+    elif choice == "2":
+        print("The coin starts glowing")
+    elif choice == "3":
+        Coininium()
+    else:
+        print("Invalid. Try again")
+        beggar_belongings()
+
+
+
+
+
+
+
+
+def sin_achieved():
+    print("The beggars head was split open you take the cup of money he had on the ground and walk away. You feel stronger.")
+    print("Tails")
+    print("Heads")
+    choice = input("> ")
+    if choice == "1":
+        tails_riot()
+    elif choice == "2":
+        misguided_heads()
+    else:
+        print("Invalid. Try again?")
+        sin_achieved()
+
+
+def misguided_heads():
+    print("THE FREAK ENDING. You get heads and have a nicer approach to things but people can see death in your eyes your actions are nice but not genuine. A monster.")
+
+
+
+
+
+
+
+
+def tails_riot():
+    print("Tails. Tails. Tails. You used the money to cause a riot inside of the town.")
+    print("1. Sin")
+    choice = input("> ")
+    if choice == "1":
+        tails_mad()
+    else:
+        print("Invalid. Try again")
+        tails_riot()
+
+def tails_mad():
+    print("THE SINNER ENDING. You became a chaotic but not a powerful one and conniving one that enjoys the suffering of others. With the coin in your hand ready to flip for the choice of mayhem thats in store for anyone in your path")
+
+
+
+
+
 def bandit_fight():
     print("You see three suspicous people eyeing you weridly. Looks like they're picking a fight. What will you do:")
     print("1. Run away it's not worth my life")
@@ -610,6 +677,82 @@ def Ruthless_pride():
         print("Invalid. Try again") 
         Ruthless_pride()
 
+def inevitable_sloth():
+    print("You run away from the cloaked man. A lot has happened all at once first you need shelter.")
+    print("1. Go to a cave.")
+    print("2. See if you can get some money for an inn.")
+    choice = input("> ")
+    if choice == "1":
+        cave()
+    elif choice == "2":
+        inn()
+    
+    else:
+        print("Invalid. Try again")
+        inevitable_sloth()
+
+
+def cave():
+    print("You find a cave and seek refuge there. You gained some chaotic from those bandits and can experiment with it. What will you do?")
+    print("1. Experiment with your chaotic to see what you can do")
+    print("2. Choose not to")
+    choice = input("> ")
+    if choice == "1":
+        cave_chaotic()
+    elif choice == "2":
+        cave_not()
+    else:
+        print("Invalid. Try again")
+        cave()
+
+
+
+
+
+
+
+
+
+def inna():
+    print("You decided for the inn option how will you gain money?")
+    print("Employment")
+    print("")
+
+
+
+
+
+
+
+def cave_not():
+    print("CAVE RAIDED. You chose not to experiment with your chaotic which made you inexperienced in fights of orderly and chaotic eventually getting your cave raided and dying trying to defend it.")
+
+
+
+
+
+
+def cave_chaotic():
+    print("You experimented with your chaotic and figured out you can infuse your will onto to object and others. This power seems corrupted to a extent but can also make you powerful. What will you chose ")
+    print("1. Temperance")
+    print("2. Over-indulgence")
+    choice = input("> ")
+    if choice == "1":
+        cave_dweller()
+    elif choice == "2":
+        chaotic_demon()
+    else:
+        print("Invalid. Try again")    
+        cave_chaotic()
+
+
+def chaotic_demon():
+    print("CHAOTIC DEMON ENDING. You chose to gain more chaotic but instead of ascending you became known as a chaotic demon. A person who doesn't ascend stays stagnant in till they evolve into something more gruesome")
+
+
+
+def cave_dweller():
+    print("CAVE DWELLER ENDING. You chose not to gain more chaotic. You decided to make the cave your home since you were wanted for 3 murders. You became strong enough to defend yourself well so you lived a long life.")
 
 
 
@@ -740,6 +883,19 @@ def wrathit():
         pending_wrath()
     else:
         print("Invalid. Try again")
+
+def pending_wrath():
+    print("You gained some chaotic off those people. A scaredy cat betraying and hiding away from people. How dissapointing.")
+    print("1. Wander")
+    choice = input("> ")
+    if choice == "1":
+        wanderer_ending()
+    else:
+        print("Invalid. Try again")
+        pending_wrath()
+
+def wanderer_ending():
+    print("WANDERER ENDING. You wander the vast plains asking people for help little do they know you are a chaotic....")
 
 
 def wrath_definite():

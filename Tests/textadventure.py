@@ -1,19 +1,4 @@
-# How the story is gonna go is that you wake up in a alley way 
-#you have to survive in this fantasy world since you are homeless and don't know where to go
-# there will be around 7 paths that you can do and these will be the seven deadly sins
-# the goal is for the player to acheive the ending where they dont end up consumed in sin
-# mutiple encounters will lead to these endings 
-#pride route will involve the player into joining a assassin cult where they will become a wanted assassin 
-#pride route continued. Due to the players pride of thinking they don't need help they will receive the pride route ending. all they need is themselves
-#wrath route will involve the player in needing a key item throughout the game that will be the coin
-#wrath route continued. The player will soley use the coin for decision making and eventually becoming a mob boss or being betrayed
-#sloth route initation is the player has to only think about themselves in a cowardly way
-#sloth route continued. the player will eventually run away and live a normal life but won't be able to truely be happy
-#gluttony route will involve the player in being poessed by a strange man forcing them to lose their memorys
-#gluttony route continued. the player will have to re piece there memorys by going around the world
-#greed intitation is for the player to also have the coin but eventually discard for something better
-#greed will have the player acting selfishly for their own benefit 
-# true route. the player will have to make careful choices for others and themselves in order to acheive true happiness
+
 while True:
     name = input("What is your name? \n> ").strip()
     if not name:  
@@ -223,7 +208,7 @@ def Arno_Dialogue():
             break
         else:
             print("Invalid. Try again")
-            Arno_Dialogue()
+            
 
             
 def gluttony_power():
@@ -238,7 +223,7 @@ def gluttony_power():
 
 def watchtower():
     print("You arrive at the watchtower and see a library. book shelves of filled with books all around you")
-    print("You see some books you are interested in 2 especially. Which one do you read?")
+    print("You see some books you are interested in 1 and 2 especially. Which one do you read?")
     print("1. Book 1")
     print("2. Book 2")
     choice = input("> ")
@@ -420,6 +405,7 @@ def monster_infestation():
         chaotic_fight()
     else:
         print("Invalid. Try again")
+        monster_infestation()
 
 def chaotic_fight():
     print("You need to find a chaotic in order to become a pillar of strength in this world")
@@ -440,7 +426,7 @@ def chaotic_fight():
         chaotic_fight()
 
 def highpillar():
-    print("PILLAR OF THE WORLD ENDING. You defend against the brain wash and swiftly defeat the chaotic with one of your spells. You feel yourself ascending and become the epitome of orderly. You have the power to return to your world but your find with this outcome")
+    print("PILLAR OF THE WORLD ENDING. You defend against the brain wash and swiftly defeat the chaotic with one of your spells. You feel yourself ascending and become the epitome of orderly. You have the power to return to your world but your fine with this outcome")
     
 def orderlyinsanity():
     print("LOST MAYHEM ENDING. You fail to defend against the brain washing and get defeated instead of you ascending the chaotic ascends as a higher being of chaotic. Who knows how doomed the world is now")
@@ -487,23 +473,63 @@ def Tails_plaza():
 
 
 
+def blood_moneys():
+    print("The beggar gets executed for something you framed him for. You get some money for compensation")
+    print("1. Heads")
+    print("2. Tails")
+
+
+
+
+
 def beggar_belongings():
-    print("The things you gotten after stealing from the beggar are: Fire scroll, Teleport scroll, Dagger")
-    print("1. Use coin")
-    print("2. Use coin")
-    print("3. Use coin")
+    while True:
+        print("The things you gotten after stealing from the beggar are: Fire scroll, Teleport scroll, Dagger")
+        print("1. Use coin")
+        print("2. Use coin")
+        print("3. Use coin")
+        choice = input("> ")
+        if choice == "1":
+            print("The coin start levitating towards the items")
+        elif choice == "2":
+            print("The coin starts glowing")
+        elif choice == "3":
+            Coininium()
+            break
+        else:
+            print("Invalid. Try again")
+            beggar_belongings()
+
+def Coininium():
+    print("The items combine to make a Quarter. This Quarter can grant you any wish you want. What will you wish for?")
+    print("1. Return me to my original world")
+    print("2. Grant me unlimited power")
+    print("3. A sandwich")
+    print("4. Break the Quarter")
     choice = input("> ")
     if choice == "1":
-        print("The coin start levitating towards the items")
+        coin_return()
     elif choice == "2":
-        print("The coin starts glowing")
+        unlimited_death()
     elif choice == "3":
-        Coininium()
+        sandwich()
+    elif choice == "4":
+        end()
     else:
         print("Invalid. Try again")
-        beggar_belongings()
+        Coininium()
 
+def coin_return():
+    print("COIN RETURN. You wish to go back to your original world. You return a day hasn't passed. You didn't make that many sacrifices lucky you")
 
+def unlimited_death():
+    print("DIVINE INTERVENTION ENDING. You wish for unlimited power. Little did you know you can't wish that their is a higher being from preventing you from doing that. No shortcuts. You get atomized.")
+
+def sandwich():
+    print("SANDWICH ENDING. You get a sandwich")
+
+def end():
+    print("END OF THE WORLD. You break the coin. The ground begins to shake, the sun explodes, everything goes white.")
 
 
 
@@ -713,10 +739,64 @@ def cave():
 
 
 
-def inna():
-    print("You decided for the inn option how will you gain money?")
+def inn():
+    print("You decided for the inn option. How will you gain money?")
     print("Employment")
-    print("")
+    print("Nah Imma do my own thing")
+    choice = input("> ")
+    if choice == "1":
+        inn_employment()
+    elif choice == "2":
+        rob_someone()
+    else:
+        print("Invalid. Try again")
+        inn()
+
+
+def rob_someone():
+    print("You rob someone and gain money to buy a room in the inn")
+    print("You settle down their for a while in till your out of money again. What will you do")
+    print("1. Rob someone")
+    choice = input("> ")
+    if choice == "1":
+        rob_someone2()
+    else:
+        print("Invalid. Try again")
+        rob_someone()
+
+def rob_someone2():
+    print("ROBBER ENDING. You kept on robbing people in till you gained a reputation for yourself. People call you the robber. They say that if you stay past midnight the robber will rob you")
+
+
+
+def inn_employment():
+    print("You decided to work for the inn this way you can live at the inn while also gaining money")
+    print("You work their for a couple weeks in till you get caught for murdering 3 people")
+    print("The police raid you. You have to do something!")
+    print("1. Fight back")
+    print("2. Run away")
+    choice = input("> ")
+    if choice == "1":
+        police_route()
+    elif choice == "2":
+        caught_police()
+    else:
+        print("Invalid. Try again")
+        inn_employment()
+
+
+
+
+
+def caught_police():
+    print("RUN AWAY ENDING. You ran and you ran in till you couldn't anymore. You're forever wanted and can't settle down. You decide to just end it all")
+
+
+
+
+def police_route():
+    print("POLICE ENDING. You fight back valiantly and the chief of the police sees this and sees the skills you have. You get recruited to the police and work for them now")
+    
 
 
 
@@ -852,7 +932,7 @@ def wrath_if():
         wrath_sin()
     else:
         print("Invalid. Try again")
-        wrath_if
+        wrath_if()
 
 
 
@@ -870,7 +950,7 @@ def wrath_sin():
         wrathit()
     else:
         print("Invalid. Try again")
-        wrath_sin
+        wrath_sin()
 
 
 
@@ -883,6 +963,9 @@ def wrathit():
         pending_wrath()
     else:
         print("Invalid. Try again")
+        wrathit()
+
+
 
 def pending_wrath():
     print("You gained some chaotic off those people. A scaredy cat betraying and hiding away from people. How dissapointing.")

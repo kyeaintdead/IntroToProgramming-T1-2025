@@ -6,7 +6,8 @@ while True:
     elif name.isdigit():  
         print("Names cannot be numbers. Try again.")
     else:
-        break  
+        break
+print("Your name is:", name)
 print("WARNING. This game is heavily dark and relys on careful choice making. A simple choice can change your route for the worst, but this game doesn't have any wrong choices")
 print("The Ultimate goal of the game is to return back to your previous world since in this setting you have been transported in a alternate world with horrors")
 print("This game follow aspects of the seven deadly sins. Will you fall to sin or succeed in virtue?")
@@ -455,6 +456,9 @@ def fire_spell():
 
 
 
+
+
+
 def Tails_plaza():
     print("So you have chosen Tails... You will take a much more brutal approach on things. You arrive at the plaza and see a beggar. What will you do?")
     print("1. Bash his head in")
@@ -473,11 +477,106 @@ def Tails_plaza():
 
 
 
-def blood_moneys():
-    print("The beggar gets executed for something you framed him for. You get some money for compensation")
-    print("1. Heads")
-    print("2. Tails")
+def blood_money():
+    print("You hand the guard a pouch heavy with coins. They jingle like tiny screams in the dead air.")
+    print("The beggar looks at you, confused, hopeful — until they realize what you've done.")
+    print("You framed them. You told the guards theyd stolen your coin.")
+    print("The guards drag them away. Their pleas echo down the alley until silence devours them.")
+    print()
+    print("A week passes. A messenger finds you at the market.")
+    print("'For your assistance in upholding justice,' he says, handing you a small sealed envelope.")
+    print("Inside, thirty blood-red coins clink together. The metal smells like iron and regret.")
+    print("You feel their weight. Its heavier than gold should be.")
+    print()
+    print("That night, you dream of the beggar — eyes hollow, mouth sewn shut with silver thread.")
+    print("When you wake, your palms are stained red. You wash them, but the color wont fade.")
+    print()
+    print("1. Spend the blood money without hesitation.")
+    print("2. Try to return it.")
+    print("3. Flip the coin again — maybe fate will decide whats next.")
+    choice = input("> ")
 
+    if choice == "1":
+        spend_blood_money()
+    elif choice == "2":
+        return_blood_money()
+    elif choice == "3":
+        fate_coin_flip()
+    else:
+        print("The wind answers instead. The coins rattle like teeth. You feel the world watching.")
+        blood_money()
+
+def spend_blood_money():
+    print()
+    print("You buy a new cloak, food, and drink. Every luxury dulls the sound of their scream.")
+    print("But as you eat, you swear the taste of metal clings to your tongue.")
+    print("Your gold pouch seems to whisper when you sleep — promising more, if you only reach deeper into your greed.")
+    print()
+    print("The more you spend, the less you feel. The less you feel, the more the coins whisper.")
+    print("One morning, you wake to find every coin melted into your flesh — shining through your veins like molten light.")
+    print("Your heart beats once... twice... and turns to gold.")
+    print()
+    print("You have become a statue of wealth — unmoving, eternal, adored by none.")
+    print("The market dogs lick at your feet. They taste copper.")
+    print()
+    print("=== ENDING: THE GILDED CORPSE ===")
+    print("Greed hollowed you out and filled the space with silence.")
+    print()
+    print("1. Restart")
+    print("2. Exit")
+    choice = input("> ")
+    if choice == "1":
+        start_fantasy()
+    elif choice == "2":
+        exit()
+    else:
+        spend_blood_money()
+
+def return_blood_money():
+    print()
+    print("You walk to the guards’ hall, trembling. You leave the coins on their desk and whisper an apology.")
+    print("No one listens. When you step outside, the world feels colder — but lighter.")
+    print("A raven watches from the rooftop, and in its eye you see yourself reflected — small, but clean again.")
+    print()
+    print("You spend the rest of your life feeding the hungry, never touching gold again.")
+    print("Sometimes, when you sleep, you still hear coins clinking in the dark.")
+    print("But you never wake with blood on your hands.")
+    print()
+    print("=== ENDING: THE WEIGHT LIFTED ===")
+    print("You broke the circle of greed, but its echo remains.")
+    print()
+    print("1. Restart")
+    print("2. Exit")
+    choice = input("> ")
+    if choice == "1":
+        start_fantasy()
+    elif choice == "2":
+        exit()
+    else:
+        return_blood_money()
+
+def fate_coin_flip():
+    print()
+    print("You take out the same coin. It glints under the moonlight, half gold, half crimson.")
+    print("You whisper: 'Heads — redemption. Tails — more blood.'")
+    print("The coin spins. It never lands. It floats in the air, humming softly.")
+    print("Light and shadow twist around you, pulling you into the coin’s reflection.")
+    print("You fall through your own greed, into a city made of mirrors and screams.")
+    print()
+    print("No one ever sees you again — but sometimes, when a coin is flipped, your reflection appears for a moment, grinning.")
+    print()
+    print("=== ENDING: THE COIN’S CURSE ===")
+    print("Fate does not forgive. It only collects interest.")
+    print()
+    print("1. Restart")
+    print("2. Exit")
+    choice = input("> ")
+    if choice == "1":
+        start_fantasy()
+    elif choice == "2":
+        exit()
+    else:
+        fate_coin_flip()
 
 
 
@@ -979,6 +1078,7 @@ def pending_wrath():
 
 def wanderer_ending():
     print("WANDERER ENDING. You wander the vast plains asking people for help little do they know you are a chaotic....")
+    
 
 
 def wrath_definite():

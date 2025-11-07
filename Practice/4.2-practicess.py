@@ -15,7 +15,7 @@ for i in range(1,100,9):
 #print only to positive numbers
 import random
 random_numbers = []
-#for i in range(0, 100):
+for i in range(0, 100):
     #random_numbers.append(random.randint(-100, 101))
     #for num in random_numbers:
         #if num > 0:

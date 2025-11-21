@@ -1,0 +1,19 @@
+import time
+from adafruit_circuitplayground import cp
+
+GREEN = (0, 255, 0)
+OFF = (0, 0, 0)
+
+while True:
+    if cp.switch:
+        for i in range(5):
+            cp.pixels[i] = OFF
+        for i in range(5, 10):
+            cp.pixels[i] = GREEN
+    else:
+        for i in range(5):
+            cp.pixels[i] = GREEN
+        for i in range(5, 10):
+            cp.pixels[i] = OFF
+    
+    time.sleep(0.05)

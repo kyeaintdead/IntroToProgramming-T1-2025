@@ -1,0 +1,35 @@
+from adafruit_circuitplayground import cp
+import time
+
+ 
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+OFF = (0, 0, 0)
+
+while True:
+    x = cp.acceleration[0]
+    if x < -3:
+        cp.pixels[1] = GREEN
+        cp.pixels[2] = GREEN
+        cp.pixels[3] = GREEN
+        cp.pixels[6] = OFF
+        cp.pixels[7] = OFF
+        cp.pixels[8] = OFF
+
+    elif x > 3:
+        cp.pixels[1] = OFF
+        cp.pixels[2] = OFF
+        cp.pixels[3] = OFF
+        cp.pixels[6] = RED
+        cp.pixels[7] = RED
+        cp.pixels[8] = RED
+
+    else:
+        cp.pixels[1] = OFF
+        cp.pixels[2] = OFF
+        cp.pixels[3] = OFF
+        cp.pixels[6] = OFF
+        cp.pixels[7] = OFF
+        cp.pixels[8] = OFF
+
+    time.sleep(0.05)

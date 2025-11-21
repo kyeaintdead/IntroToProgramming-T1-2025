@@ -1,0 +1,11 @@
+#from adafruit_circuitplayground import cp
+
+
+
+#while True:
+   #if cp.button_a:
+    #  cp.play_tone(440,1.0)
+     # cp.play_tone(220,1.0)
+   #   cp.play_tone(300,1.0)
+      #cp.play_tone(280,1.0)
+      #cp.play_tone(150,1.0)

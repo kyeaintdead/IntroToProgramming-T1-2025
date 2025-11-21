@@ -1,0 +1,18 @@
+import time
+from adafruit_circuitplayground import cp
+
+cp.pixels.brightness = 0.3
+
+while True:
+    if cp.button_a:
+        cp.pixels.fill((255, 0, 0))
+        cp.start_tone(500)
+        time.sleep(0.5)
+        cp.stop_tone()
+
+        cp.pixels.fill((0, 0, 255))
+        cp.start_tone(900)
+        time.sleep(0.5)
+        cp.stop_tone()
+        cp.pixels.fill((0,0,0))
+
